@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+		<style>
+			canvas{
+				border: 5px solid gray;
+				background-color: #222222;
+			}
+			body{
+				background-color: rgba(20, 20, 10, 1);
+			}
+			.sliderf{
+				-webkit-appearance: none;
+				appearance: none;
+				height: 10px;
+				background-color: rgba(60, 60, 60, 1);
+				width: 260px;
+				opacity: 0.8;
+				outline: none;
+				-webkit-transition: .2s;
+				transition: opacity .2s;
+			}
+			.sliderf:hover{
+				opacity: 1;
+			}
+			.sliderf::-webkit-slider-thumb{
+				-webkit-appearance: none;
+				appearance: none;
+				width: 25px;
+				height: 25px;
+				border-radius: 1000000000000000px;
+				background: rgba(10, 100, 100, 1);
+				cursor: pointer;
+			}
+			.sliders{
+				-webkit-appearance: none;
+				appearance: none;
+				background-color: rgba(60, 60, 60, 1);
+				height: 10px;
+				width: 260px;
+				opacity: 0.8;
+				outline: none;
+				-webkit-transition: .2s;
+				transition: opacity .2s;
+			}
+			.sliders:hover{
+				opacity: 1;
+			}
+			.sliders::-webkit-slider-thumb{
+				-webkit-appearance: none;
+				appearance: none;
+				width: 25px;
+				border-radius: 100000000000px;
+				height: 25px;
+				background: rgba(10, 100, 10, 1);
+				cursor: pointer;
+			}
+			.button{
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				color: white;
+				border: none;
+				padding: 10px 20px;
+				display: inline-block;
+				opacity: 0.83;
+				background-color: #cc0000;
+			}
+			.button:hover{
+				opacity: 1;
+			}
+			/*
+			.second{
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				color: white;
+				border: none;
+				padding: 15px 25px;
+				display: inline-block;
+				background-color: #cc0000;
+			}
+			.fourth{
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				color: white;
+				border: none;
+				padding: 15px 25px;
+				display: inline-block;
+				background-color: #cc0000;
+			}
+			.third{
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				color: white;
+				border: none;
+				padding: 15px 25px;
+				display: inline-block;
+				background-color: #cc0000;
+			}*/
+			body{
+				margin: 0px;
+			}
+			#dariush{
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+		<title>
+			Hello
+		</title>
+	</head>
+	<body>
+		<canvas>
+		</canvas>
+		<script src = "gravity.js"> </script>
+		<div id = "dariush">
+			<input type = "range" min = "1" max = "10" value = "5" class = "sliderf" id = 
+			"firstslider" onmouseup = "init()" />
+			<input type = "range" min = "1" max = "10" value = "5" class = "sliders" id = 
+			"secondslider" onmouseup = "init()"/>
+			<form action = "index.html">
+				<input type = "submit" value = "Back" class = "button"/>
+			</form>
+				<!--<input type = "button" class = "button" value = "Calculate" onclick = "init()" />-->
+		</div>
+	</body>
+</html>
